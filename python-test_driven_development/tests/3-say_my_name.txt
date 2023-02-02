@@ -40,3 +40,6 @@ TypeError: first_name must be a string
 >>> say_my_name("Holberton", None)
 Traceback (most recent call last):
 TypeError: last_name must be a string
+
+>>> say_my_name("","")
+My name is
