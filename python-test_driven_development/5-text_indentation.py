@@ -5,6 +5,14 @@ after each of these characters: ., ? and : """
 
 
 def text_indentation(text):
+    """ function that prints a text with 2 new lines after
+    each of these characters: ., ? and :
+
+    Args:
+        text (str): text to be edited
+    Raises:
+        TypeError: If text is not a string
+    """
     char = {'.', '?', ':'}
     if type(text) is not str:
         raise TypeError('text must be a string')
@@ -13,7 +21,7 @@ def text_indentation(text):
         if x in char:
             print(f'{x}\n')
         else:
-            if text_form[i - 1] in char:
+            if text_form[i - 1] in char and i == ' ':
                 continue
             if text_form[i] == ' ' and text_form[i - 1] == ' ':
                 continue
