@@ -126,10 +126,10 @@
   def increment(n):
       n += 1
 
-a = 1
-increment(a)
-print(a)
-```
+  a = 1
+  increment(a)
+  print(a)
+  ```
 
 * **17. List incrementation**
   * [17-answer.txt](./17-answer.txt): What does this script print?
@@ -137,10 +137,10 @@ print(a)
   def increment(n):
       n.append(4)
 
-l = [1, 2, 3]
-increment(l)
-print(l)
-```
+  l = [1, 2, 3]
+  increment(l)
+  print(l)
+  ```
 
 * **18. List assignation**
   * [18-answer.txt](./18-answer.txt): What does this script print?
@@ -148,11 +148,11 @@ print(l)
   def assign_value(n, v):
       n = v
 
-l1 = [1, 2, 3]
-l2 = [4, 5, 6]
-assign_value(l1, l2)
-print(l1)
-```
+  l1 = [1, 2, 3]
+  l2 = [4, 5, 6]
+  assign_value(l1, l2)
+  print(l1)
+  ```
 
 * **19. Copy a list object**
   * [19-copy_list.py](./19-copy_list.py): Python function `def copy_list(l):` that returns
@@ -165,10 +165,10 @@ print(l1)
   ```
 
 * **21. Tuple or not?**
- * [21-answer.txt](./21-answer.txt): Is `a` a tuple?
- ```
- a = (1, 2)
- ```
+  * [21-answer.txt](./21-answer.txt): Is `a` a tuple?
+  ```
+  a = (1, 2)
+  ```
 
 * **22. Tuple or not?**
   * [22-answer.txt](./22-answer.txt): Is `a` a tuple?
