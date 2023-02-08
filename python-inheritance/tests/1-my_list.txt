@@ -16,6 +16,13 @@ Now use it:
 	>>> issubclass(MyList, list)
 	True
 
+	>>> x = __import__('1-my_list').__doc__
+	>>> len(x) > 1
+	True
+
+	>>> 'print_sorted' in dir(MyList)
+	True
+
 	>>> my_list = MyList(None)
 	Traceback (most recent call last):
 	TypeError: 'NoneType' object is not iterable
