@@ -1,0 +1,53 @@
+Using class ``MyList``
+-----------------------
+
+Class MyList can store a list
+Has a function print_sorted to print the list in MyList sorted
+
+First import class ``MyList``
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Now use it:
+
+    	>>> type(MyList())
+	<class '1-my_list.MyList'>
+
+	>>> issubclass(MyList, list)
+	True
+
+        >>> my_list = MyList()
+	>>> my_list.append(-1)
+	>>> my_list.append(4)
+	>>> my_list.append(3)
+	>>> my_list.append(0)
+	>>> my_list.print_sorted()
+	[-1, 0, 3, 4]
+
+	>>> my_list = MyList()
+	>>> my_list.append(-1)
+	>>> my_list.append(-4)
+	>>> my_list += [-8]
+	>>> my_list.append(-5)
+	>>> my_list.print_sorted()
+	[-8, -5, -4, -1]
+
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
+
+	>>> my_list = MyList()
+	>>> my_list.append(0)
+	>>> my_list.append(0)
+	>>> my_list.append(0)
+	>>> my_list.append(0)
+	>>> my_list.print_sorted()
+	[0, 0, 0, 0]
+
+	>>> my_list = MyList()
+	>>> my_list.append(0)
+	>>> my_list.append(70)
+	>>> my_list.append(4)
+	>>> my_list.append(333)
+	>>> my_list.print_sorted()
+	[0, 4, 70, 333]
