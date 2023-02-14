@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-0;10;1c""" Task 1 - create a Base class """
+""" module Base """
 import json
 
 
