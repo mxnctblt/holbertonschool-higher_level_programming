@@ -46,3 +46,12 @@ class Square(Rectangle):
                 self.y = args[3]
             except IndexError:
                 pass
+
+    def to_dictionary(self):
+        """ return the dictionary representation of a Square """
+        a = ['id', 'x', 'size', 'y']
+        b = [self.id, self.x, self.width, self.y]
+        dict = {}
+        for i in range(len(a)):
+            dict[a[i]] = b[i]
+        return dict
