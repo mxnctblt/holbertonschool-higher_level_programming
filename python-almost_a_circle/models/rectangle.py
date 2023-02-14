@@ -16,10 +16,10 @@ class Rectangle(Base):
             id (int): id of the rectangle
         """
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
         @property
         def width(self):
@@ -33,7 +33,8 @@ class Rectangle(Base):
                 raise TypeError("width must be an integer")
             elif value <= 0:
                 raise ValueError("width must be >= 0")
-            self.__width = value
+            else:
+                self.__width = value
 
         @property
         def height(self):
@@ -47,7 +48,8 @@ class Rectangle(Base):
                 raise TypeError("height must be an integer")
             elif value <= 0:
                 raise ValueError("height must be >= 0")
-            self.__height = value
+            else:
+                self.__height = value
 
         @property
         def x(self):
@@ -60,9 +62,9 @@ class Rectangle(Base):
             self.__x = value
 
         @property
-        def x(self):
-            """ retrieve the x coordinate of the rectangle """
-            return self.__x
+        def y(self):
+            """ retrieve the y coordinate of the rectangle """
+            return self.__y
 
         @y.setter
         def y(self, value):
