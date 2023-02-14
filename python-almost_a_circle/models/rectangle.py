@@ -16,57 +16,47 @@ class Rectangle(Base):
             id (int): id of the rectangle
         """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
-        @property
-        def width(self):
-            """ retrieve the width of the rectangle """
-            return (self.__width)
+    @property
+    def width(self):
+        """ retrieve the width of the rectangle """
+        return self.__width
 
-        @width.setter
-        def width(self, value):
-            """ set the width of the rectangle """
-            if not isinstance(value, int):
-                raise TypeError("width must be an integer")
-            elif value <= 0:
-                raise ValueError("width must be >= 0")
-            else:
-                self.__width = value
+    @width.setter
+    def width(self, value):
+        """ set the width of the rectangle """
+        self.__width = value
 
-        @property
-        def height(self):
-            """ retrieve the height of the rectangle """
-            return (self.__height)
+    @property
+    def height(self):
+        """ retrieve the height of the rectangle """
+        return self.__height
 
-        @height.setter
-        def height(self, value):
-            """ set the height of the rectangle """
-            if not isinstance(value, int):
-                raise TypeError("height must be an integer")
-            elif value <= 0:
-                raise ValueError("height must be >= 0")
-            else:
-                self.__height = value
+    @height.setter
+    def height(self, value):
+        """ set the height of the rectangle """
+        self.__height = value
 
-        @property
-        def x(self):
-            """ retrieve the x coordinate of the rectangle """
-            return self.__x
+    @property
+    def x(self):
+        """ retrieve the x coordinate of the rectangle """
+        return self.__x
 
-        @x.setter
-        def x(self, value):
-            """ set the x coordinate of the rectangle """
-            self.__x = value
+    @x.setter
+    def x(self, value):
+        """ set the x coordinate of the rectangle """
+        self.__x = value
 
-        @property
-        def y(self):
-            """ retrieve the y coordinate of the rectangle """
-            return self.__y
+    @property
+    def y(self):
+        """ retrieve the y coordinate of the rectangle """
+        return self.__y
 
-        @y.setter
-        def y(self, value):
-            """ set the y coordinate of the rectangle """
-            self.__y = value
+    @y.setter
+    def y(self, value):
+        """ set the y coordinate of the rectangle """
+        self.__y = value
