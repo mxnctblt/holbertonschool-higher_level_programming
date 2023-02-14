@@ -106,9 +106,18 @@ class Rectangle(Base):
         elif args and args != "":
             try:
                 self.id = args[0]
-                self.__width = args[1]
-                self.__height = args[2]
-                self.__x = args[3]
-                self.__y = args[4]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
             except IndexError:
                 pass
+
+    def to_dictionary(self):
+        """ return the dictionary representation of a Rectangle """
+        a = ['id', 'width', 'height', 'x', 'y']
+        b = [self.id, self.width, self.height, self.x, self.y]
+        dict = {}
+        for i in range(len(a)):
+            dict[a[i]] = b[i]
+        return dict
