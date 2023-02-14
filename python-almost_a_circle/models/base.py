@@ -60,13 +60,13 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ return a list of instances """
-        res = []
-        with open(cls.__name__ + ".json", mode="r") as read_file:
-            text = read_file.read()
-        text = cls.from_json_string(text)
-        for item in text:
-            if type(item) == dict:
-                res.append(cls.create(**item))
-            else:
-                res.append(item)
-        return res
+        fn = cls.__name__ + ".json"
+        lst = []
+        try:
+            with open(fn, mode="r") as myFile:
+                lst = cls.from_json_string(myFile.read())
+            for i, j in enumerate(lst):
+                lst[i] = cls.create(**lst[i])
+        except:
+            pass
+        return (lst)
