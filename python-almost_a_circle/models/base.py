@@ -15,7 +15,7 @@ class Base:
 
         Args:
             self: represents the instance of the class
-            id (int): public instance attribute
+            id (int): identity of the base
         """
         if id is None:
             Base.__nb_objects += 1
