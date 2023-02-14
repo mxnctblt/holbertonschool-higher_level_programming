@@ -6,7 +6,7 @@ from models.base import Base
 class Rectangle(Base):
     """ define Rectangle """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ initializes Rectangle
+        """ initialize Rectangle
 
         Args:
             width (int): width of the rectangle
@@ -82,7 +82,7 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """ returns the rectangle's area """
+        """ return the rectangle's area """
         return (self.__width * self.__height)
 
     def display(self):
@@ -93,13 +93,13 @@ class Rectangle(Base):
             print((self.__x * " ") + (self.__width * '#'))
 
     def __str__(self):
-        """ returns [Rectangle] (<id>) <x>/<y> - <width>/<height> """
+        """ return [Rectangle] (<id>) <x>/<y> - <width>/<height> """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
                                                        self.y, self.width,
                                                        self.height)
 
     def update(self, *args, **kwargs):
-        """ assigns a key/value argument to attributes """
+        """ assign a key/value argument to attributes """
         if kwargs and kwargs != "":
             for key, value in kwargs.items():
                 setattr(self, key, value)
