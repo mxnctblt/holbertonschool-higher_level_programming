@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Task 1 - create a Base class """
+0;10;1c""" Task 1 - create a Base class """
 import json
 
 
@@ -27,7 +27,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """ return the JSON string representation of list_dictionaries """
         if list_dictionaries is None:
-            return "[]"
+            list_dictionaries = []
         return json.dumps(list_dictionaries)
 
     @classmethod
