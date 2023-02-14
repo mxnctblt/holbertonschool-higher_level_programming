@@ -38,7 +38,7 @@ class Base:
                 fileo.write('[]')
             else:
                 fileo.write(cls.to_json_string([cls.to_dictionary(x)
-                                for x in list_objs]))
+                            for x in list_objs]))
 
     @staticmethod
     def from_json_string(json_string):
