@@ -130,6 +130,41 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r2.x, 10)
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             r3 = Rectangle(10, 2, None, 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r4 = Rectangle(10, 2, 11.5, 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r5 = Rectangle(10, 2, 'string', 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r6 = Rectangle(10, 2, [1, 2, 3, 4], 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r7 = Rectangle(10, 2, {1, 2, 3, 4}, 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r8 = Rectangle(10, 2, float('inf'), 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r9 = Rectangle(10, 2, float('nan'), 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r10 = Rectangle(10, 2, True, 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r11 = Rectangle(10, 2, b'hello', 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r12 = Rectangle(10, 2, bytearray(b'hello'), 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r13 = Rectangle(10, 2, (1, 2, 3), 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r14 = Rectangle(10, 2, {"a": 1, "b": 2}, 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r15 = Rectangle(10, 2, frozenset({1, 2, 3}), 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r16 = Rectangle(10, 2, range(2), 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r17 = Rectangle(10, 2, complex(2), 0, 12)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r18 = Rectangle(10, 2, memoryview(b'hello'), 0, 12)
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            r19 = Rectangle(10, 2, -2, 0, 12)
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            r20 = Rectangle(10, 2, -156, 0, 12)
+
     def test_y(self):
         """ testing y and its raises for tasks 2 & 3 """
         r1 = Rectangle(10, 2, 0, 7, 12)
@@ -139,6 +174,40 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r2.y, 10)
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             r3 = Rectangle(10, 2, 0, None, 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r4 = Rectangle(10, 2, 0, 11.5, 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r5 = Rectangle(10, 2, 0, 'string', 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r6 = Rectangle(10, 2, 0, [1, 2, 3, 4], 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r7 = Rectangle(10, 2, 0, {1, 2, 3, 4}, 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r8 = Rectangle(10, 2, 0, float('inf'), 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r9 = Rectangle(10, 2, 0, float('nan'), 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r10 = Rectangle(10, 2, 0, True, 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r11 = Rectangle(10, 2, 0, b'hello', 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r12 = Rectangle(10, 2, 0, bytearray(b'hello'), 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r13 = Rectangle(10, 2, 0, (1, 2, 3), 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r14 = Rectangle(10, 2, 0, {"a": 1, "b": 2}, 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r15 = Rectangle(10, 2, 0, frozenset({1, 2, 3}), 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r16 = Rectangle(10, 2, 0, range(2), 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r17 = Rectangle(10, 2, 0, complex(2), 12)
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r18 = Rectangle(10, 2, 0, memoryview(b'hello'), 12)
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            r19 = Rectangle(10, 2, 0, -2, 12)
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            r20 = Rectangle(10, 2, 0, -156, 12)
 
 if __name__ == '__main__':
     unittest.main()
