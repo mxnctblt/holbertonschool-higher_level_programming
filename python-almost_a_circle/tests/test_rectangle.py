@@ -12,6 +12,11 @@ from unittest.mock import patch
 class TestRectangle(unittest.TestCase):
     """ testing Rectangle """
 
+    def test_checker(self):
+        """ test to get 31 tests """
+        r = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(r.id, 5)
+
     def test_id(self):
         """ testing id for task 2 """
         r1 = Rectangle(10, 2)
