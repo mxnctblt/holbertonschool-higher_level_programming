@@ -89,3 +89,23 @@ class TestSquare(unittest.TestCase):
         s1_dictionary = s1.to_dictionary()
         expected = {'id': 5, 'x': 5, 'size': 5, 'y': 5}
         self.assertEqual(s1_dictionary, expected)
+
+    def test_missing(self):
+        s1 = Square(1, 2)
+        self.assertEqual(s1.x, 2)
+        s2 = Square(1, 2, 3)
+        self.assertEqual(s2.y, 3)
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            s3 = Square("1")
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            s4 = Square(1, "2")
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            s5 = Square(1, 2, "3")
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            s6 = Square(-1)
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            s7 = Square(0)
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            s8 = Square(1, -2)
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            s9 = Square(1, 2, -3)
