@@ -4,6 +4,7 @@
 import MySQLdb
 import sys
 
+
 def list_states():
     """ lists all states from the database hbtn_0e_0_usa
 
@@ -30,6 +31,7 @@ def list_states():
     # clean Up
     cur.close()
     db.close()
+
 
 if __name__ == "__main__":
     list_states()
