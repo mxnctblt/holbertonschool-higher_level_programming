@@ -5,6 +5,7 @@ from model_state import Base
 
 
 class City(Base):
+    """ for task 14 """
 
     __tablename__ = 'cities'
 
