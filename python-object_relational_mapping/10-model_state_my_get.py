@@ -25,6 +25,6 @@ if __name__ == "__main__":
     if res != "":
         print(res)
     else:
-        print("Not Found")
+        print("Not found")
 
     session.close()
