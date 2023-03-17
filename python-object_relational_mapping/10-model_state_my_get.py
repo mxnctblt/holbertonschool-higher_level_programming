@@ -22,9 +22,9 @@ if __name__ == "__main__":
         if argv[4] in row.__dict__['name']:
             res = row.__dict__['id']
 
-    if res == "":
-        print("Not Found")
-    else:
+    if res != "":
         print(res)
+    else:
+        print("Not Found")
 
     session.close()
