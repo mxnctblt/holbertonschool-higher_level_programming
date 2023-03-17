@@ -17,10 +17,10 @@ if __name__ == "__main__":
     session = Session(engine)
     rows = session.query(State).all()
 
-    try:
-        first = session.query(State).first()
+    first = session.query(State).first()
+    if first:
         print("{}: {}".format(first.id, first.name))
-    except:
+    else:
         print('Nothing')
 
     session.close()
