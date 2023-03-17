@@ -16,7 +16,7 @@ def list_states():
         argv[2]: mysql password
         argv[3]: database name
     """
-    if len(argv) == 5:
+    if len(argv[4]) <= 15:
         # connecting to a MySQL database
         db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                              passwd=argv[2], db=argv[3])
