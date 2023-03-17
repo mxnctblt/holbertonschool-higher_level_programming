@@ -28,10 +28,10 @@ def list_states():
                 AND states.name = '{:s}'\
                 ORDER BY cities.id ASC".format(argv[4]))
 
-    # obtaining Query Results
+    # obtaining & printing Query Results
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    r = [row[0] for row in rows]
+    print(", ".join(r))
 
     # clean Up
     cur.close()
