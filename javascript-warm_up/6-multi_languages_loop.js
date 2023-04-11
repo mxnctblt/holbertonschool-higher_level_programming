@@ -4,4 +4,4 @@ let i = 0;
 
 for (i; i < l.length; i++) {
   console.log(l[i]);
-};
+}
